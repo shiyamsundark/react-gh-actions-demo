@@ -1,4 +1,4 @@
-name: Self-hosted AWS server CI/CD pipeline
+name: Self-hosted AWS server CI/CD pipeline with ubuntu
 
 on:
   push:
