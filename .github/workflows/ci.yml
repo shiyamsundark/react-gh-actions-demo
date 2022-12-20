@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Self-hosted AWS server CI/CD pipeline
 
 on:
   push:
