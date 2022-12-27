@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-        <button onClick={handleClick}>BUILD</button>
+        <button type="button" class="build-button">BUILD</button>
         </a>
       </header>
     </div>
