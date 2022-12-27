@@ -8,6 +8,8 @@ function App() {
         <p>
            Data Extractor Form
         </p>
+        <label for="version">Release_Version</label>
+        <input type="text" name="Release-Version" id="version" placeholder="Enter Artifact's Version">
         <a
           className="App-link"
           href="https://reactjs.org"
