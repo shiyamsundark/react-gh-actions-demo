@@ -15,21 +15,13 @@ function App() {
            <input type="text" name="release-version" id="releaseversion" placeholder="Enter Artifact's Releaseversion" required />
          </div>
          <div className="input-container">
-           <label for="">Model Type </label>
-           <select name="" id="">
+           <label>Model Type </label>
            <option value="">Tata</option>
            <option value="">Hyundai</option>
            <option value="">Honda</option>
          </div>
+         <button onclick="location.href='https://www.google.com'">Build</button>
         </form>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button onClick={handleClick}>BUILD</button>
-        </a>
       </header>
     </div>
   );
