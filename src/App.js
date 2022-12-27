@@ -15,10 +15,10 @@ function App() {
          </div> 
          <div>
            <label for="modeltype">Model_Type</label>
-           <select name="" id="" />
+           <select name="Model_type" id="modeltype">
+           <option value="">Skoda</option>
            <option value="">Hyundai</option>
-           <option value="">Kia</option>
-           <option value="">MG</option>
+           <option value="">Honda</option></select>
          </div> 
          <a
           className="App-link"
