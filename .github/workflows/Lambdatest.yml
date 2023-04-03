@@ -19,16 +19,19 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
       
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@master
-      with:
-         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-         AWS_ACCESS_KEY_SECRET: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
-         aws-region: us-west-2
+#     - name: Configure AWS Credentials
+#       uses: aws-actions/configure-aws-credentials@master
+#       with:
+#          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#          AWS_ACCESS_KEY_SECRET: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
+#          aws-region: us-west-2
          
     - name: AWS Lambda Deploy
       run: aws lambda update-function-code --function-name Testlambdafunction --region us-west-2 --zip-file fileb://<(cat ./src/index.js)      
-
+      env:
+         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+         AWS_ACCESS_KEY_SECRET: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
+         aws-region: us-west-2
 #     - name: Install Node.js
 #       uses: actions/setup-node@v1
 #       with:
