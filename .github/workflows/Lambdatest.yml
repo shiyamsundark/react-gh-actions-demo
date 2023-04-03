@@ -17,6 +17,7 @@ jobs:
       with:
          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
          AWS_ACCESS_KEY_SECRET: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
+         aws-region: us-west-2
          
     - name: AWS Lambda Deploy
       run: aws lambda update-function-code --function-name Testlambdafunction --region us-west-2 --zip-file fileb://<(cat ./src/index.js)      
