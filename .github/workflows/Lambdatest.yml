@@ -38,7 +38,7 @@ jobs:
            zip -r9 lambda.zip ./src/index.js
         
     - name: AWS Lambda Deploy
-      run: ws lambda update-function-code --function-name Testlambdafunction --zip-file fileb://lambda.zip
+      run: aws lambda update-function-code --function-name Testlambdafunction --zip-file fileb://lambda.zip
       
 #       run: aws lambda update-function-code --function-name Testlambdafunction --region us-west-2 --zip-file fileb://testlambda.zip
 #       env:
