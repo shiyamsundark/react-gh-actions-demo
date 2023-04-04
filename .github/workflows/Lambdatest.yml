@@ -35,7 +35,7 @@ jobs:
         
     - name: zip Lambda Function
       run: |
-           zip -r9 lambda.zip ./indexv1.js
+           zip -r9 lambda.zip ./index.js
         
     - name: AWS Lambda Deploy
       run: aws lambda update-function-code --function-name Testlambdafunction --zip-file fileb://lambda.zip
